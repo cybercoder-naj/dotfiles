@@ -1,0 +1,50 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "height": 30,
+
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+
+    "modules-left": [
+	"hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+	"battery",
+	"clock"
+    ],
+    "hyprland/workspaces": {
+	"persistent-workspaces": {
+	    "*": 5
+	}
+    },
+    "hyprland/window": {
+	"format": "{title} - {class}",
+	"max-length": 50,
+	"rewrite": {
+	    "(.*) — Zen Browser - zen": " $1",
+	    "(.*) - com.mitchellh.ghostty": "  $1"
+	}
+    },
+    "hyprland/submap": {
+        "format": "{}",
+        "max-length": 8,
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    }
+}
