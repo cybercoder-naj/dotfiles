@@ -28,7 +28,8 @@
 	"max-length": 50,
 	"rewrite": {
 	    "(.*) — Zen Browser - zen": " $1",
-	    "(.*) - com.mitchellh.ghostty": "  $1"
+	    "(.*) - com.mitchellh.ghostty": "  $1",
+	    "(.*) - Discord - discord": "  $1"
 	}
     },
     "pulseaudio": {
