@@ -19,4 +19,4 @@ window-padding-x = 10
 theme = catppuccin-mocha
 background-opacity = 0.6
 background-blur = true
-
+font-family = Fira Code
