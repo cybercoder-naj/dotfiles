@@ -29,7 +29,8 @@
 	"rewrite": {
 	    "(.*) — Zen Browser - zen": " $1",
 	    "(.*) - com.mitchellh.ghostty": "  $1",
-	    "(.*) - Discord - discord": "  $1"
+	    "(.*) - Discord - discord": "  $1",
+	    "(.*) - Code - OSS - code-oss": "   $1"
 	}
     },
     "pulseaudio": {
