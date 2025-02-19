@@ -25,10 +25,15 @@ window#waybar {
     background-color: transparent;
     color: #ffffff;
 }
+#workspaces button.empty {
+    color: @ctp-mocha-subtext0;
+    opacity: 0.7;
+}
 #workspaces button:hover {
     color: black;
 }
 #workspaces button.active {
+    color: #ffffff;
     background-color: @ctp-mocha-overlay0;
 }
 #workspaces button.urgent {
