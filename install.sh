@@ -42,13 +42,23 @@ if [[ $EUID -eq 0 ]]; then
   exit 1
 fi
 
+echo -ne "Welcome to cybercoder-naj's Hyprland install script!\n\n"
+echo -e "\033[32m"
+echo " ██████╗██╗   ██╗██████╗ ███████╗██████╗  ██████╗ ██████╗ ██████╗ ███████╗██████╗       ███╗   ██╗ █████╗      ██╗";
+echo "██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔══██╗      ████╗  ██║██╔══██╗     ██║";
+echo "██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝██║     ██║   ██║██║  ██║█████╗  ██████╔╝█████╗██╔██╗ ██║███████║     ██║";
+echo "██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗██║     ██║   ██║██║  ██║██╔══╝  ██╔══██╗╚════╝██║╚██╗██║██╔══██║██   ██║";
+echo "╚██████╗   ██║   ██████╔╝███████╗██║  ██║╚██████╗╚██████╔╝██████╔╝███████╗██║  ██║      ██║ ╚████║██║  ██║╚█████╔╝";
+echo " ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝      ╚═╝  ╚═══╝╚═╝  ╚═╝ ╚════╝ ";
+echo "                                                                                                                  ";
+echo -e "\033[0m"
+
+exit 0 # remove
+
 if ! sudo -v; then
   echo -e "\033[31mFailed to obtain sudo privileges. Exiting.\033[0m"
   exit 1
 fi
-
-echo "Welcome to cybercoder-naj's Hyprland install script!"
-echo "" # Add tui art
 
 run_background "yay -Syu --noconfirm" "/tmp/yay_update.log" "Updating system"
 
