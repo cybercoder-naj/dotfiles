@@ -4,5 +4,6 @@ local load = function(mod)
 end
 
 load("user.settings")
+load("user.keybindings")
 require("user.plugins")
 

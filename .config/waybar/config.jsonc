@@ -1,68 +1,85 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top",
-    "height": 30,
+  "layer": "top",
+  "height": 30,
 
-    "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
+  "margin-top": 8,
+  "margin-left": 8,
+  "margin-right": 8,
 
-    "modules-left": [
-	"hyprland/window"
-    ],
-    "modules-center": [
-        "hyprland/workspaces"
-    ],
-    "modules-right": [
-	"pulseaudio",
-	"battery",
-	"clock"
-    ],
-    "hyprland/workspaces": {
-	"persistent-workspaces": {
+  "modules-left": [
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
 	    "*": 5
-	}
-    },
-    "hyprland/window": {
+    }
+  },
+  "hyprland/window": {
 	"format": "{title} - {class}",
 	"max-length": 50,
 	"rewrite": {
-	    "(.*) — Zen Browser - zen": " $1",
-	    "(.*) - com.mitchellh.ghostty": "  $1",
-	    "(.*) - Discord - discord": "  $1",
-	    "(.*) - Code - OSS - code-oss": "   $1"
-	}
-    },
-    "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
-            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "phone-muted": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "scroll-step": 1,
-        "on-click": "pavucontrol",
-        "ignored-sinks": ["Easy Effects Sink"]
-    },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""],
-        "max-length": 25
-    },
-    "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+    "(.*) — Zen Browser - zen": " $1",
+    "(.*) - com.mitchellh.ghostty": "  $1",
+    "(.*) - Discord - discord": "  $1",
+    "(.*) - Code - OSS - code-oss": "   $1"
     }
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+  "battery": {
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "clock": {
+    "format": "{:%H:%M}  ",
+    "format-alt": "{:%A, %B %d, %Y (%R)}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode"          : "year",
+      "weeks-pos"     : "right",
+      "on-scroll"     : 1,
+      "format": {
+        "months":     "<span color='#ffead3'><b>{}</b></span>",
+        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode"
+    }
+  }
 }
