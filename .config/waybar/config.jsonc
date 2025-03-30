@@ -11,12 +11,10 @@
     "hyprland/window"
   ],
   "modules-center": [
-    "hyprland/workspaces"
-  ],
-  "modules-right": [
+    "hyprland/workspaces",
+    "clock",
     "pulseaudio",
-    "battery",
-    "clock"
+    "battery"
   ],
   "hyprland/workspaces": {
     "persistent-workspaces": {
@@ -24,13 +22,13 @@
     }
   },
   "hyprland/window": {
-	"format": "{title} - {class}",
-	"max-length": 50,
-	"rewrite": {
-    "(.*) — Zen Browser - zen": " $1",
-    "(.*) - com.mitchellh.ghostty": "  $1",
-    "(.*) - Discord - discord": "  $1",
-    "(.*) - Code - OSS - code-oss": "   $1"
+    "format": "{title} - {class}",
+    "max-length": 50,
+    "rewrite": {
+      "(.*) — Zen Browser - zen": " $1",
+      "(.*) - com.mitchellh.ghostty": "  $1",
+      "(.*) - Discord - discord": "  $1",
+      "(.*) - Code - OSS - code-oss": "   $1"
     }
   },
   "pulseaudio": {
@@ -63,23 +61,11 @@
     "max-length": 25
   },
   "clock": {
-    "format": "{:%H:%M}  ",
+    "format": " {:%H:%M}",
     "format-alt": "{:%A, %B %d, %Y (%R)}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode"          : "year",
-      "weeks-pos"     : "right",
-      "on-scroll"     : 1,
-      "format": {
-        "months":     "<span color='#ffead3'><b>{}</b></span>",
-        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    },
     "actions":  {
       "on-click-right": "mode"
     }
-  }
+  },
+  "group/power": {}
 }
