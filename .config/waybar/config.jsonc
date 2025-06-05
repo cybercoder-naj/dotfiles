@@ -19,6 +19,11 @@
     "custom/separator",
     "battery"
   ],
+  "modules-right": [
+    "cpu",
+    "custom/separator",
+    "memory"
+  ],
   "hyprland/workspaces": {
     "persistent-workspaces": {
 	    "*": 5
@@ -75,5 +80,15 @@
     "format": "|",
     "interval": "once",
     "tooltip": false
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "{}% ",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": "{}% ",
+    "max-length": 10
   }
 }

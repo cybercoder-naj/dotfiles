@@ -87,3 +87,11 @@ window#waybar.empty #window {
         color: #000000;
     }
 }
+
+#cpu {
+  padding: 0 4px;
+}
+
+#memory {
+  padding: 0 4px;
+}
