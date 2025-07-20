@@ -8,7 +8,7 @@ return {
     },
     opts = {}, -- config options here
     keys = {
-      { '<leader>-', ':Triptych<CR>' },
+      { '<leader>e', ':Triptych<CR>' },
     },
   }
 }
