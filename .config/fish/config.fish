@@ -16,3 +16,6 @@ zoxide init --cmd cd fish | source
 
 # Path
 fish_add_path -P "$BUN_INSTALL/bin" "$JAVA_HOME/bin" "/usr/local/go/bin"
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/nishant/.ghcup/bin # ghcup-env
+fish_add_path -a "/home/nishant/.foundry/bin"

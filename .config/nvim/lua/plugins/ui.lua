@@ -7,6 +7,13 @@ return {
       vim.cmd([[colorscheme tokyonight-night]])
     end,
   },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {
+      icons_enabled = true
+    }
+  },
   { 
     "nvim-tree/nvim-web-devicons", 
     opts = {}
