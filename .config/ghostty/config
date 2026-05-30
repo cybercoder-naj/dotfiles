@@ -16,7 +16,7 @@
 # on Ghostty's website, at https://ghostty.org/docs/config.
 
 window-padding-x = 10
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 background-opacity = 0.6
 background-blur = true
 font-family = Fira Code
